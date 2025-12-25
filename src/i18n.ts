@@ -1,0 +1,87 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+// Translation resources
+const resources = {
+  en: {
+    translation: {
+      navigation: {
+        backToMeetings: "Back to Meetings",
+      },
+      meetingDetails: {
+        title: "Meeting Details",
+        file: "File",
+        processed: "Processed",
+        duration: "Duration",
+        summary: "Summary",
+        participants: "Participants",
+        keyPoints: "Key Points",
+        actionItems: "Action Items",
+        fullTranscript: "Full Transcript",
+        words: "words",
+        meetingNotFound: "Meeting not found",
+        failedToFetch:
+          "Failed to fetch meeting details. Please try again later.",
+        loading: "Loading...",
+      },
+      common: {
+        error: "Error",
+        success: "Success",
+        cancel: "Cancel",
+        save: "Save",
+        edit: "Edit",
+        delete: "Delete",
+      },
+    },
+  },
+  mr: {
+    translation: {
+      navigation: {
+        backToMeetings: "मीटिंगकडे परत जा",
+      },
+      meetingDetails: {
+        title: "मीटिंगचे तपशील",
+        file: "फाइल",
+        processed: "प्रक्रिया केली",
+        duration: "कालावधी",
+        summary: "सारांश",
+        participants: "सहभागी",
+        keyPoints: "मुख्य मुद्दे",
+        actionItems: "कृती आयटम",
+        fullTranscript: "संपूर्ण प्रतिलेख",
+        words: "शब्द",
+        meetingNotFound: "मीटिंग सापडली नाही",
+        failedToFetch:
+          "मीटिंगचे तपशील मिळवण्यात अपयश. कृपया पुन्हा प्रयत्न करा.",
+        loading: "लोड करत आहे...",
+      },
+      common: {
+        error: "त्रुटी",
+        success: "यश",
+        cancel: "रद्द करा",
+        save: "जतन करा",
+        edit: "संपादित करा",
+        delete: "हटवा",
+      },
+    },
+  },
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: "en",
+    debug: false,
+    interpolation: {
+      escapeValue: false,
+    },
+    detection: {
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
+    },
+  });
+
+export default i18n;

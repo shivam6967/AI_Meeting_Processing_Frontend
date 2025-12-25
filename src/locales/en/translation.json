@@ -1,0 +1,28 @@
+{
+  "navigation": {
+    "backToMeetings": "Back to Meetings"
+  },
+  "meetingDetails": {
+    "title": "Meeting Details",
+    "file": "File",
+    "processed": "Processed",
+    "duration": "Duration",
+    "summary": "Summary",
+    "participants": "Participants",
+    "keyPoints": "Key Points",
+    "actionItems": "Action Items",
+    "fullTranscript": "Full Transcript",
+    "words": "words",
+    "meetingNotFound": "Meeting not found",
+    "failedToFetch": "Failed to fetch meeting details. Please try again later.",
+    "loading": "Loading..."
+  },
+  "common": {
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete"
+  }
+}
